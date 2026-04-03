@@ -1,10 +1,21 @@
 #!/usr/bin/python3
+import sys
+
 if __name__ == "__main__":
-    str = input()
-    argv = str.split()
-    if len(argv) == 1:
-        print("1 argument:")
+    argv = sys.argv[1:]  # exclude the script name itself
+    count = len(argv)
+
+    if count == 1:
+        label = "argument"
     else:
-        print(f"{len(argv)} arguments:")
-    for i in range(len(argv)):
+        label = "arguments"
+
+    if count == 0:
+        separator = "."
+    else:
+        separator = ":"
+
+    print(f"{count} {label}{separator}")
+
+    for i in range(count):
         print(f"{i + 1}: {argv[i]}")
