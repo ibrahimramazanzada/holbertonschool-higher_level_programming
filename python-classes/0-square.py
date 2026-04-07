@@ -3,7 +3,4 @@
 
 class Square:
     """This class represents a square."""
-
-    def __init__(self):
-        """Initializes a new square."""
-        pass
+    pass
