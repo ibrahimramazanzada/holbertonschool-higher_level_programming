@@ -3,15 +3,17 @@
 
 
 def safe_print_list_integers(my_list=[], x=0):
-    """Print the first x elements and return the count of integers."""
+    """Print integer values from the first x elements of a list."""
     count = 0
 
-    for i in range(x):
-        try:
-            print("{:d}".format(my_list[i]), end="")
-            count += 1
-        except TypeError:
-            continue
-    print()
+    try:
+        for i in range(x):
+            element = my_list[i]
+            if isinstance(element, int) and not isinstance(element, bool):
+                print("{:d}".format(element), end="")
+                count += 1
+        print()
+    except (IndexError, ValueError):
+        print()
 
     return count
