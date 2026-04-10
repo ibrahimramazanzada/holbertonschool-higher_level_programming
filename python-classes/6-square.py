@@ -30,13 +30,13 @@ class Square:
 
     @property
     def size(self):
-        """Get the value of the private instance attribute size."""
+        """Get the value of the private attribute size."""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Set the value of the private instance attribute size."""
-        if not isinstance(value, (int)):
+        """Set the value of the private tribute size."""
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
@@ -48,5 +48,5 @@ class Square:
             print()
         else:
             print("\n" * self.__position[1], end="")
-            for i in range(self.__size):
+            for _ in range(self.__size):
                 print(" " * self.__position[0] + "#" * self.__size)
