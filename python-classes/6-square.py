@@ -1,15 +1,19 @@
 #!/usr/bin/python3
 """This module defines a class Square that"""
+
+
 class Square:
     """Class Square that defines a square with a private instance attribute size."""
     def __init__(self, size=0, position=(0, 0)):
         """Initialize the square with size and position."""
         self.size = size
         self.position = position
+
     @property
     def position(self):
         """Get the value of the private instance attribute position."""
         return self.__position
+
     @position.setter
     def position(self, value):
         """Set the value of the private instance attribute position."""
@@ -23,6 +27,7 @@ class Square:
     def area(self):
         """Calculate and return the area of the square."""
         return self.__size ** 2
+
     @property
     def size(self):
         """Get the value of the private instance attribute size."""
