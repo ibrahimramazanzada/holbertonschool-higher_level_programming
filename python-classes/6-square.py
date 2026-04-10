@@ -3,7 +3,7 @@
 
 
 class Square:
-    """Class Square that defines a square with a private instance attribute size."""
+    """Class Square that defines a square with a size."""
     def __init__(self, size=0, position=(0, 0)):
         """Initialize the square with size and position."""
         self.size = size
@@ -11,12 +11,12 @@ class Square:
 
     @property
     def position(self):
-        """Get the value of the private instance attribute position."""
+        """Get the value of the instance attribute position."""
         return self.__position
 
     @position.setter
     def position(self, value):
-        """Set the value of the private instance attribute position."""
+        """Set the value of the instance attribute position."""
         if (not isinstance(value, tuple) or
             len(value) != 2 or
             not all(isinstance(num, int) for num in value) or
