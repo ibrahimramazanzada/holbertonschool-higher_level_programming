@@ -11,10 +11,14 @@ Traceback (most recent call last):
 Exception: area() is not implemented
 
 Check integer_validator()
->>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 Check integer_validator("age")
->>> bg.integer_validator("age", 12)
+>>> bg.integer_validator("age")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 Check integer_validator("age", 1)
 >>> bg.integer_validator("age", 1)
