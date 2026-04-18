@@ -1,4 +1,4 @@
-""""This module really does smth"""
+"""This module really does smth"""
 from abc import ABC, abstractmethod
 from math import pi
 
